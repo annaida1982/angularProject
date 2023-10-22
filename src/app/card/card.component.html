@@ -1,0 +1,28 @@
+
+<div class="container-fluid">
+  <div class="row align-items-start">
+      <div class="col">
+        <div>
+          <div  class="card" style="width: 25rem;">
+            
+            <div *ngFor='let film of films'>
+              <!--
+              to use loop for that to fill card of information
+              -->
+            <img [src]="film.imgUrl" style="width: 25rem;">
+            <!--to use Property Binding to show picture from array-->
+              <div class="card-body">
+                <h5 class="card-title">{{film.cardTitle}}</h5>
+                <h6></h6>
+                <div> 
+                    <button  type="button" class="btn btn-info" (click)="Showtext()"> {{film.btnBtnInfo}}</button>
+                    <p class="card-text" *ngIf="this.disabled">{{this.film.cardText}}</p>
+                  <!--to use Event Binding to change the button and show text-->
+                </div>
+                  </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div class="row align-items-start">
+      <div class="col">
+        <div>
+          <div  class="card" style="width: 25rem;">
+            <div *ngFor='let film of films'>
+            <img [src]="film.imgUrl" style="width: 25rem;">
+              <div class="card-body">
+                <h5 class="card-title">{{film.cardTitle}}</h5>
+                <h6><p class="card-text" *ngIf="disabled">{{film.cardText}}</p></h6>
+                    <button  type="button" class="btn btn-info" (click)="Showtext()"> {{film.btnBtnInfo}}</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
